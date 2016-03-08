@@ -6,6 +6,11 @@ module.exports = {
     path: 'build',
     filename: 'bundle.js'
   },
+  module: {
+    loaders: [
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({title: 'Awesome App!'})
   ]
