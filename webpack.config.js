@@ -7,7 +7,7 @@ var BUILD_PATH = path.resolve(__dirname, 'build');
 
 module.exports = {
   entry: isDevelopment
-    ? ['webpack-hot-middleware/client', './app/app.js'] : ['./app/app.js'],
+    ? ['./app/app.js', 'webpack-hot-middleware/client'] : ['./app/app.js'],
   output: {
     path: BUILD_PATH,
     filename: 'bundle.js'
@@ -17,8 +17,12 @@ module.exports = {
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
     ]
   },
+  devtool: 'source-map',
   plugins: [
-    new HtmlWebpackPlugin({title: 'Awesome App!'}),
+    new HtmlWebpackPlugin({
+      title: 'Awesome App!',
+      templateContent: '<html><head></head><body><div id="app"></div></body></html>'
+    }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
