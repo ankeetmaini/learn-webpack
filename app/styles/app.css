@@ -1,0 +1,16 @@
+body {
+  background: cornsilk;
+}
+ul.nav-sections {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.nav-sections > li {
+  display: inline;
+  padding: 30px;
+}
+.nav-sections a:HOVER {
+  text-decoration: underline;
+}

@@ -2,6 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
+import '../styles/app.css';
+
 import {
   fetchPosts,
   fetchUsers,
@@ -16,8 +18,7 @@ class App extends Component {
     return (
       <div>
         <h1><Link to='/'>Awesome App!</Link></h1>
-        <h4>Click on the below links to navigate to different components</h4>
-        <ul>
+        <ul className='nav-sections'>
           <li><Link to='/photos'>Photos</Link></li>
           <li><Link to='/albums'>Albums</Link></li>
           <li><Link to='/posts'>Posts</Link></li>
@@ -41,7 +42,7 @@ class App extends Component {
               fetchComments: this.props.fetchComments,
               fetchAlbums: this.props.fetchAlbums
             });
-          })
+          }) || <h3>Click on above links to see magic</h3>
         }
       </div>
     );

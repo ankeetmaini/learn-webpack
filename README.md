@@ -16,7 +16,17 @@ npm start
 - [x] Generate `index.html` on the fly
 - [x] Have `source-maps` to debug like a Boss!
 - [x] Have a sample app ready? Yay `bundle.js` is **1MB**, Optimize!
+- [x] Have CSS bundled in
+- [ ] Hot reloading keeping the state intact, transforms!
+- [ ] Show errors on browser, *react-transform-catch-erros*, Sir Dan Abramov!
+- [ ] Generate Webpack conf for DEV and PROD
+- [ ] Extract CSS separately
 - [ ] Optimize bundle size
+  - [ ] Minification
+  - [ ] Define `NODE_ENV=PRODUCTION` for React and other perf improvements
 - [ ] Separate bundles for app and vendor
 - [ ] Hashing
 - [ ] Common chunking, zzzzzz
+- [ ] Server rendered? Huhh?
+- [ ] PostCSS, kill me now?
+- [ ] Finally, clean the build folder, will you please?
