@@ -1,9 +1,15 @@
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+
+var isDevelopment = process.env.NODE_ENV === 'development';
+var BUILD_PATH = path.resolve(__dirname, 'build');
 
 module.exports = {
-  entry: './app/app.js',
+  entry: isDevelopment
+    ? ['webpack-hot-middleware/client', './app/app.js'] : ['./app/app.js'],
   output: {
-    path: 'build',
+    path: BUILD_PATH,
     filename: 'bundle.js'
   },
   module: {
@@ -12,6 +18,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({title: 'Awesome App!'})
+    new HtmlWebpackPlugin({title: 'Awesome App!'}),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ]
 };
