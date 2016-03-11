@@ -19,15 +19,16 @@ npm start
 - [x] Have CSS bundled in
 - [ ] Hot reloading keeping the state intact, transforms!
 - [ ] Show errors on browser, *react-transform-catch-erros*, Sir Dan Abramov!
-- [ ] Generate Webpack conf for DEV and PROD
-- [ ] Extract CSS separately
-- [ ] Optimize bundle size
-  - [x] Dedupe, reduces the bundle size a little > 0 :P
-  - [ ] Minification [PROD only]
-  - [ ] Define `NODE_ENV=PRODUCTION` for React and other perf improvements
+- [x] Generate Webpack conf for DEV and PROD
 - [x] Separate bundles for app and vendor
+- [ ] Extract CSS separately
+- [x] Optimize bundle size (`app`: **299kB** -> **23kB** and `vendor`: **919kB** -> **199kB**)
+  - [x] Dedupe, reduces the bundle size a little > 0 :P
+  - [x] Minification [PROD only]
+  - [x] Define `NODE_ENV=PRODUCTION` for React and other perf improvements
 - [x] Hashing
+- [ ] Long term caching
 - [x] Common chunking, zzzzzz
 - [ ] Server rendered? Huhh?
 - [ ] PostCSS, kill me now?
-- [ ] Finally, clean the build folder, will you please?
+- [x] Finally, clean the build folder, ~~will you please?~~

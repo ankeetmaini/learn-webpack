@@ -12,7 +12,7 @@ let webpackHotMiddleware = require('webpack-hot-middleware');
 // app variables
 const webpackConfig = require(path.resolve(__dirname, 'webpack.config.js'));
 const BUILD_PATH = path.resolve(__dirname, 'build');
-const isDevelopment = process.env.NODE_ENV === 'development';
+const isDevelopment = process.env.NODE_ENV !== 'production';
 
 // middlewares
 app.use(express.static(BUILD_PATH));
