@@ -22,11 +22,12 @@ npm start
 - [ ] Generate Webpack conf for DEV and PROD
 - [ ] Extract CSS separately
 - [ ] Optimize bundle size
-  - [ ] Minification
+  - [x] Dedupe, reduces the bundle size a little > 0 :P
+  - [ ] Minification [PROD only]
   - [ ] Define `NODE_ENV=PRODUCTION` for React and other perf improvements
-- [ ] Separate bundles for app and vendor
-- [ ] Hashing
-- [ ] Common chunking, zzzzzz
+- [x] Separate bundles for app and vendor
+- [x] Hashing
+- [x] Common chunking, zzzzzz
 - [ ] Server rendered? Huhh?
 - [ ] PostCSS, kill me now?
 - [ ] Finally, clean the build folder, will you please?
