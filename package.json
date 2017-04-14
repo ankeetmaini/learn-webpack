@@ -26,7 +26,7 @@
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.9.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.14",
+    "webpack": "^2.4.0",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.9.1"
   },
